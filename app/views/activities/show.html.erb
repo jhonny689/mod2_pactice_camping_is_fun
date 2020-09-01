@@ -1,0 +1,22 @@
+<h1>Activity Profile</h1>
+
+<div>
+    <table>
+        <tr>
+            <td><b>Name</b></td>
+            <td>:</td>
+            <td><%= @activity.name %></td>
+        </tr>
+        <tr>
+            <td><b>Difficulty</b></td>
+            <td>:</td>
+            <td><%= @activity.difficulty %></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><%= button_to "Back to index", activities_path, method: :get %></td>
+        </tr>
+        
+    </table>
+</div>

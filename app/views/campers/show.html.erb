@@ -1,0 +1,28 @@
+<h1>Camper Profile</h1>
+
+<div>
+    <table>
+        <tr>
+            <td><b>Name</b></td>
+            <td>:</td>
+            <td><%= @camper.name %></td>
+        </tr>
+        <tr>
+            <td><b>Age</b></td>
+            <td>:</td>
+            <td><%= @camper.age %></td>
+        </tr>
+        <tr>
+            <td valign="top"><b>List of Activities</b></td>
+            <td valign="top">:</td>
+            <td><% @camper.activities.uniq.each do |activity| %><li><%= activity.name %></li>
+                <% end %>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><%= button_to "Back to index", campers_path, method: :get %></td>
+        </tr>
+        
+    </table>
